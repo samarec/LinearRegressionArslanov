@@ -9,15 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import static org.jblas.DoubleMatrix.*;
-
 @SuppressWarnings("serial")
 public class StartAnalyze extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         GradientDescentCostFunctionMinimizer minimizer = new GradientDescentCostFunctionMinimizer(0.01, 1500, false);
-        DoubleMatrix dataMatrix = loadCSVFile("linearregression/ex1data1.txt");
-        DoubleMatrix features = concatHorizontally(ones(dataMatrix.rows), dataMatrix.getColumn(0));
+        DoubleMatrix dataMatrix = DoubleMatrix.loadCSVFile("linearregression/ex1data1.txt");
+        DoubleMatrix features = DoubleMatrix.concatHorizontally(DoubleMatrix.ones(dataMatrix.rows), dataMatrix.getColumn(0));
         DoubleMatrix values = dataMatrix.getColumn(1);
 
         DoubleMatrix theta = minimizer.minimizeCostFunction(features, values);
@@ -26,6 +24,7 @@ public class StartAnalyze extends HttpServlet {
         //Assert.assertEquals(theta.get(1, 0), 1.1663623503355864);
         out.println(theta.get(0, 0));
         out.println(theta.get(1, 0));
+        //out.println("Hi!");
 
     }
 }

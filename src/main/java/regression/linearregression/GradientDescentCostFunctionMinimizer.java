@@ -14,7 +14,7 @@ public class GradientDescentCostFunctionMinimizer implements CostFunctionMinimiz
 
     /**
      * Constructor.
-     *
+     *https://github.com/ignl/MachineLearning/blob/master/
      * @param iterations Number of iterations for algorithm.
      */
     public GradientDescentCostFunctionMinimizer(double alfa, double iterations, boolean normalizeFeatures) {
