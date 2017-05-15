@@ -3,7 +3,6 @@ package regression;
 import org.jblas.DoubleMatrix;
 import regression.linearregression.GradientDescentCostFunctionMinimizer;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -12,7 +11,7 @@ import java.io.PrintWriter;
 import static org.jblas.DoubleMatrix.*;
 
 @SuppressWarnings("serial")
-public class StartAnalyze extends HttpServlet {
+public class StartAnalyze {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         GradientDescentCostFunctionMinimizer minimizer = new GradientDescentCostFunctionMinimizer(0.01, 1500, false);
