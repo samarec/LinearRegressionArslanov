@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/appengine-helloworld.iml" filepath="$PROJECT_DIR$/appengine-helloworld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LinearRegressionArslanov.iml" filepath="$PROJECT_DIR$/LinearRegressionArslanov.iml" />
     </modules>
   </component>
 </project>
